@@ -101,6 +101,22 @@ Row Level Security enabled - users can only access their own habits.
 2. Google sign-in button exists in UI but won't work until OAuth is configured
 3. The signup flow shows a success message asking users to confirm email
 
+## Branching Strategy
+
+```
+main → dev → sit → uat → prod
+```
+
+| Branch | Purpose |
+|--------|---------|
+| main | Active development, feature work |
+| dev | Development integration |
+| sit | System Integration Testing |
+| uat | User Acceptance Testing |
+| prod | Production release |
+
+**Workflow:** Code moves up through branches via pull requests/merges.
+
 ## Session History
 
 **Session 1 (2026-03-04):**
