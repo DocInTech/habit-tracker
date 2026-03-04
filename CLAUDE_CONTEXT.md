@@ -116,12 +116,59 @@ dev → sit → uat → prod
 
 **Workflow:** Code moves up through branches via pull requests/merges.
 
+## Development Environment
+
+- **Node.js:** v20.20.0 (installed via nvm)
+- **nvm:** Installed at `~/.config/nvm`
+- **GitHub CLI:** Installed and authenticated as `DocInTech`
+- **To start dev server:**
+  ```bash
+  export NVM_DIR="$HOME/.config/nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  npm run dev
+  ```
+
+## User's Learning Goals
+
+1. Learn JavaScript through building
+2. Learn Vue.js (used at workplace)
+3. Build portfolio projects for GitHub
+4. Learn git branching and code promotion workflows (dev → sit → uat → prod)
+5. Future: Add AI-based features
+
 ## Session History
 
 **Session 1 (2026-03-04):**
-- Planned the entire app with user (step-by-step decisions)
-- Set up Vue + Vuetify + Supabase
-- Implemented all core features (add, view, complete, delete habits)
-- Added authentication with email confirmation message
-- Pushed to GitHub
-- User wants to continue later with: Google auth, streak tracking, AI features
+
+*Planning Phase:*
+- Decided on platform: Web app
+- Decided on language: JavaScript
+- Decided on framework: Vue 3 (workplace uses Vue, portfolio demonstration)
+- Initially considered Firebase, switched to Supabase (user preference)
+- Chose Firestore-style approach with Supabase PostgreSQL
+- Auth: Email/password + Google (Google OAuth deferred for later)
+- UI: Vuetify (Material Design components)
+- Core features: Add, view, complete, delete habits
+
+*Implementation:*
+- Created Vue 3 + Vite project
+- Added Vuetify, Vue Router, Supabase
+- Upgraded Node.js from 18 to 20 via nvm (required by Vite 7)
+- Built LoginView.vue with email/password auth
+- Built HomeView.vue with habit CRUD operations
+- Added email confirmation success message after signup
+- User tested app successfully - all features working
+
+*DevOps:*
+- Installed GitHub CLI (`gh`)
+- Authenticated as DocInTech
+- Created repo: https://github.com/DocInTech/habit-tracker
+- Set up branching strategy: dev → sit → uat → prod
+- Removed `main` branch, `dev` is now default working branch
+- Created this context file for session continuity
+
+*Next Session TODO:*
+- [ ] Add Google OAuth sign-in
+- [ ] Add streak tracking (consecutive days)
+- [ ] Practice code promotion: merging dev → sit → uat → prod
+- [ ] Deploy to Vercel or Netlify
+- [ ] Later: AI-based goal assessment feature
