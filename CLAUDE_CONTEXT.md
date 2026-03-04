@@ -104,13 +104,12 @@ Row Level Security enabled - users can only access their own habits.
 ## Branching Strategy
 
 ```
-main → dev → sit → uat → prod
+dev → sit → uat → prod
 ```
 
 | Branch | Purpose |
 |--------|---------|
-| main | Active development, feature work |
-| dev | Development integration |
+| dev | Active development (default branch) |
 | sit | System Integration Testing |
 | uat | User Acceptance Testing |
 | prod | Production release |
